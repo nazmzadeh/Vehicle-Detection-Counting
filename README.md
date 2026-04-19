@@ -6,31 +6,28 @@ It detects vehicles in video streams, tracks them across frames, and counts them
 
 ## -- Features
 
-Real-time vehicle detection using YOLO
-Multi-object tracking with persistent IDs
-Class filtering for vehicle-related classes
-Traffic counting using virtual line crossing
-Per-class vehicle counting (cars, buses, trucks, etc.)
-Object trajectory visualization
-Live overlay display
+- Real-time vehicle detection using YOLO
+- Multi-object tracking with persistent IDs
+- Class filtering for vehicle-related classes
+- Traffic counting using virtual line crossing
+- Per-class vehicle counting (cars, buses, trucks, etc.)
+- Object trajectory visualization
+- Live overlay display
 
 ## --Technologies Used
 
-Python
-Jupyter Notebook
-OpenCV (cv2)
-Ultralytics YOLO
+**Python, Jupyter Notebook, OpenCV (cv2), Ultralytics YOLO**
 
 ## --How It Works
 
-Video input is read frame-by-frame
-YOLO detects and tracks vehicles
-Each vehicle gets a unique track_id
-The center point of each vehicle is tracked
-A horizontal counting line is defined
-When a vehicle crosses the line:
-It is counted once
-The count is stored by vehicle type
+- Video input is read frame-by-frame
+- YOLO detects and tracks vehicles
+- Each vehicle gets a unique track_id
+- The center point of each vehicle is tracked
+- A horizontal counting line is defined
+- When a vehicle crosses the line:
+- It is counted once
+- The count is stored by vehicle type
 
 ## --Output Visualization
 
@@ -42,7 +39,7 @@ Center-point trajectories
 A counting line
 Real-time vehicle counts per class
 
-**🚀 Installation & Usage**
+## **🚀 Installation & Usage**
 
 1. Clone the repository
 
