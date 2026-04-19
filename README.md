@@ -45,10 +45,12 @@ Real-time vehicle counts per class
 **🚀 Installation & Usage**
 
 1. Clone the repository
+
    ```python
     git clone https://github.com/nazmzadeh/Vehicle-Detection-Counting.git
     cd Vehicle-Detection-Counting
    ```
+
 2. Install dependencies
 
    ```bash
