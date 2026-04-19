@@ -1,10 +1,11 @@
-🚗 Vehicle Detection & Counting (YOLO26 + OpenCV)
+# 🚗 Vehicle Detection & Counting (YOLO26 + OpenCV)
 
 This project performs real-time vehicle detection, tracking, and traffic counting using a YOLO-based model (YOLO26 compatible) and OpenCV.
 
 It detects vehicles in video streams, tracks them across frames, and counts them when they cross a virtual line.
 
--- Features
+## -- Features
+
 Real-time vehicle detection using YOLO
 Multi-object tracking with persistent IDs
 Class filtering for vehicle-related classes
@@ -13,13 +14,15 @@ Per-class vehicle counting (cars, buses, trucks, etc.)
 Object trajectory visualization
 Live overlay display
 
---Technologies Used
+## --Technologies Used
+
 Python
 Jupyter Notebook
 OpenCV (cv2)
 Ultralytics YOLO
 
---How It Works
+## --How It Works
+
 Video input is read frame-by-frame
 YOLO detects and tracks vehicles
 Each vehicle gets a unique track_id
@@ -29,7 +32,7 @@ When a vehicle crosses the line:
 It is counted once
 The count is stored by vehicle type
 
---Output Visualization
+## --Output Visualization
 
 The system displays:
 
@@ -39,19 +42,30 @@ Center-point trajectories
 A counting line
 Real-time vehicle counts per class
 
-🚀 Installation & Usage
+**🚀 Installation & Usage**
 
 1. Clone the repository
-   git clone https://github.com/nazmzadeh/Vehicle-Detection-Counting.git
-   cd Vehicle-Detection-Counting
+   ```python
+    git clone https://github.com/nazmzadeh/Vehicle-Detection-Counting.git
+    cd Vehicle-Detection-Counting
+   ```
 2. Install dependencies
+
+   ```bash
    pip install ultralytics opencv-python notebook
+   ```
 
 3. Run the project
+
+   ```bash
    jupyter notebook
+   ```
 
 4. Open and run
+
+   ```bash
    main.ipynb
+   ```
 
 ## 🎥 Demo
 
