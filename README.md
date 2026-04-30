@@ -1,10 +1,11 @@
-# 🚗 Vehicle Detection & Counting (YOLO26 + OpenCV)
+# 🚗 Vehicle Detection, Tracking & Analysis (YOLO26 + OpenCV)
 
-This project performs real-time vehicle detection, tracking, and traffic counting using a YOLO-based model (YOLO26 compatible) and OpenCV.
+This project performs real-time vehicle detection, tracking, and traffic counting
+using a YOLO-based model and OpenCV. It detects vehicles in video streams, tracks
+them across frames, counts them when they cross a virtual line, and analyzes the
+collected data to extract traffic insights.
 
-It detects vehicles in video streams, tracks them across frames, and counts them when they cross a virtual line.
-
-## -- Features
+## Features
 
 - Real-time vehicle detection using YOLO
 - Multi-object tracking with persistent IDs
@@ -13,31 +14,36 @@ It detects vehicles in video streams, tracks them across frames, and counts them
 - Per-class vehicle counting (cars, buses, trucks, etc.)
 - Object trajectory visualization
 - Live overlay display
+- **Automated data pipeline — crossing events logged to structured CSV**
+- **Exploratory data analysis with class distribution visualization**
 
-## --Technologies Used
+## Technologies Used
 
-**Python, Jupyter Notebook, OpenCV (cv2), Ultralytics YOLO**
+Python, Jupyter Notebook, OpenCV (cv2), Ultralytics YOLO 2026, Pandas, Matplotlib, Seaborn
 
-## --How It Works
+## How It Works
 
 - Video input is read frame-by-frame
 - YOLO detects and tracks vehicles
-- Each vehicle gets a unique track_id
+- Each vehicle gets a unique `track_id`
 - The center point of each vehicle is tracked
 - A horizontal counting line is defined
 - When a vehicle crosses the line:
-- It is counted once
-- The count is stored by vehicle type
+  - It is counted once
+  - The count is stored by vehicle type
+  - The event is logged to `traffic_log.csv` with timestamp, frame, track ID and class
+- After the video ends, the log is analyzed and visualized in `analysis.ipynb`
 
-## --Output Visualization
+## Output Visualization
 
 The system displays:
 
-Bounding boxes around vehicles
-Unique tracking IDs
-Center-point trajectories
-A counting line
-Real-time vehicle counts per class
+- Bounding boxes around vehicles
+- Unique tracking IDs
+- Center-point trajectories
+- A counting line
+- Real-time vehicle counts per class
+- Bar chart of vehicle class distribution
 
 ## **🚀 Installation & Usage**
 
@@ -65,6 +71,16 @@ Real-time vehicle counts per class
    ```bash
    main.ipynb
    ```
+
+   This will process the video and generate `traffic_log.csv`
+
+5. Open and run `analysis.ipynb`
+
+   ```bash
+   analysis.ipynb
+   ```
+
+   This will load the CSV and display the class distribution chart
 
 ## 🎥 Demo
 
